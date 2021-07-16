@@ -1,13 +1,13 @@
 import Layout from "../components/layout/layout";
 
-const Home = () => {
+const Buscar = () => {
   return (
     <div>
       <Layout>
-        <h1>Inicios</h1>
+        <h1>Buscar</h1>
       </Layout>
     </div>
   )
 }
 
-export default Home;
+export default Buscar;
