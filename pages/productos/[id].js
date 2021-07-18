@@ -9,6 +9,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import { es } from 'date-fns/locale';
 import { Campo, InputSubmit } from '../../components/ui/Formulario';
 import Boton from '../../components/ui/Boton';
+import Image from 'next/image';
 
 const ContenedorProducto = styled.div`
   @media (min-width:768px) {
@@ -141,7 +142,7 @@ const Productos = () => {
           <ContenedorProducto>
             <div>
               <p>Publicado hace: {formatDistanceToNow(new Date(creado), {locale: es})}</p>
-              <img src={urlImage} width={500}/>
+              <Image src={urlImage} width={500} height={500}/>
               <p>{descripcion}</p>
               {user &&
                 <>

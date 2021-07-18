@@ -50,10 +50,6 @@ const Comentarios = styled.div`
     padding: .3rem 1rem;
     margin-right: 2rem;
   }
-  img {
-    width: 2rem;
-    margin-right: 2rem;
-  }
   p {
     font-size: 1.6rem;
     margin-right: 1rem;
@@ -62,6 +58,11 @@ const Comentarios = styled.div`
       margin: 0;
     }
   }
+`;
+
+const ImagenComentario = styled.img`
+  width: 2rem;
+  margin-right: 2rem;
 `;
 
 const Votos = styled.div`
@@ -96,7 +97,7 @@ const DetalleProducto = ({producto}) => {
           <TextoDescripcion>{descripcion}</TextoDescripcion>
           <Comentarios>
             <div>
-              <img src='/comentario.png'/>
+              <ImagenComentario src='/comentario.png'/>
               <p>{comentarios.length} Comentarios</p>
             </div>
           </Comentarios>
