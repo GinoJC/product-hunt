@@ -29,67 +29,65 @@ const CrearCuenta = () => {
   }
 
   return (
-    <div>
-      <Layout>
-        <>
-          <h1
-            css={css`
-              text-align: center;
-              margin-top: 5rem;
-            `}
-          >Crear Cuenta</h1>
-          <Formulario
-            onSubmit={handleSubmit}
-            noValidate
-          >
-            <Campo>
-              <label htmlFor='nombre'>Nombre</label>
-              <input
-                type='text'
-                id='nombre'
-                placeholder='Tu Nombre'
-                name='nombre'
-                value={nombre}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Campo>
-            {errors.nombre && <Error>{errors.nombre}</Error>}
-            <Campo>
-              <label htmlFor='email'>Email</label>
-              <input
-                type='email'
-                id='email'
-                placeholder='Tu Email'
-                name='email'
-                value={email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Campo>
-            {errors.email && <Error>{errors.email}</Error>}
-            <Campo>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                placeholder='Tu Password'
-                name='password'
-                value={password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Campo>
-            {errors.password && <Error>{errors.password}</Error>}
-            {error && <Error>{error}</Error>}
-            <InputSubmit
-              type='submit'
-              value='Crear Cuenta'
+    <Layout>
+      <>
+        <h1
+          css={css`
+            text-align: center;
+            margin-top: 5rem;
+          `}
+        >Crear Cuenta</h1>
+        <Formulario
+          onSubmit={handleSubmit}
+          noValidate
+        >
+          <Campo>
+            <label htmlFor='nombre'>Nombre</label>
+            <input
+              type='text'
+              id='nombre'
+              placeholder='Tu Nombre'
+              name='nombre'
+              value={nombre}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
-          </Formulario>
-        </>
-      </Layout>
-    </div>
+          </Campo>
+          {errors.nombre && <Error>{errors.nombre}</Error>}
+          <Campo>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              id='email'
+              placeholder='Tu Email'
+              name='email'
+              value={email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          </Campo>
+          {errors.email && <Error>{errors.email}</Error>}
+          <Campo>
+            <label htmlFor='password'>Password</label>
+            <input
+              type='password'
+              id='password'
+              placeholder='Tu Password'
+              name='password'
+              value={password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          </Campo>
+          {errors.password && <Error>{errors.password}</Error>}
+          {error && <Error>{error}</Error>}
+          <InputSubmit
+            type='submit'
+            value='Crear Cuenta'
+          />
+        </Formulario>
+      </>
+    </Layout>
   );
 };
 

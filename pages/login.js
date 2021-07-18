@@ -28,54 +28,52 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <Layout>
-        <>
-          <h1
-            css={css`
-              text-align: center;
-              margin-top: 5rem;
-            `}
-          >Iniciar Sesión</h1>
-          <Formulario
-            onSubmit={handleSubmit}
-            noValidate
-          >
-            <Campo>
-              <label htmlFor='email'>Email</label>
-              <input
-                type='email'
-                id='email'
-                placeholder='Tu Email'
-                name='email'
-                value={email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Campo>
-            {errors.email && <Error>{errors.email}</Error>}
-            <Campo>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                placeholder='Tu Password'
-                name='password'
-                value={password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Campo>
-            {errors.password && <Error>{errors.password}</Error>}
-            {error && <Error>{error}</Error>}
-            <InputSubmit
-              type='submit'
-              value='Iniciar Sesión'
+    <Layout>
+      <>
+        <h1
+          css={css`
+            text-align: center;
+            margin-top: 5rem;
+          `}
+        >Iniciar Sesión</h1>
+        <Formulario
+          onSubmit={handleSubmit}
+          noValidate
+        >
+          <Campo>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              id='email'
+              placeholder='Tu Email'
+              name='email'
+              value={email}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
-          </Formulario>
-        </>
-      </Layout>
-    </div>
+          </Campo>
+          {errors.email && <Error>{errors.email}</Error>}
+          <Campo>
+            <label htmlFor='password'>Password</label>
+            <input
+              type='password'
+              id='password'
+              placeholder='Tu Password'
+              name='password'
+              value={password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          </Campo>
+          {errors.password && <Error>{errors.password}</Error>}
+          {error && <Error>{error}</Error>}
+          <InputSubmit
+            type='submit'
+            value='Iniciar Sesión'
+          />
+        </Formulario>
+      </>
+    </Layout>
   );
 };
 
